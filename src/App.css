@@ -12,14 +12,23 @@
 .avatar {
   width: 250px;
   height: 250px;
+}
+
+.cursor {
   cursor: pointer;
 }
 
 .imgsection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.imgsection_meme {
   position: relative;
 }
 
-.imgsection > div {
+.imgsection_meme > div {
   position: absolute;
   padding-left: 10px;
   color: white;
