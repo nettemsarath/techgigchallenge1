@@ -2,11 +2,23 @@ import React, { useState } from "react";
 import "./index.css";
 
 const MemeForm = ({ editMeme, handlesubmitMemeForm, cancelMemeForm }) => {
-  const [memeName, setMemeName] = useState("");
+  const [memeName, setMemeName] = useState({
+    text: "",
+    position: "top"
+  });
 
   const handleChange = (event)=>{
     if(event.target.name === "memeName" ){
-      setMemeName(event.target.value);
+      setMemeName({
+        text: event.target.value,
+        position: memeName.position
+      })
+    }
+    if(event.target.name === "position" ){
+      setMemeName({
+        text: memeName.text,
+        position: event.target.value,
+      })
     }
   };
 
@@ -14,7 +26,13 @@ const MemeForm = ({ editMeme, handlesubmitMemeForm, cancelMemeForm }) => {
     <div style={ editMeme ? { display: "block" } : { display: "none" } } className='modal'>
       <div className='modalwraper'>
         <div className="form" >
-          <input placeholder="Enter Meme Name" name="memeName" onChange={handleChange} />
+          <div>
+            <input placeholder="Enter Meme Name" name="memeName" onChange={handleChange} />
+          </div>
+          <select value={memeName.position} name="position" onChange={handleChange} >
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+          </select>
           <div className="buttons" >
             <button onClick={ ()=>handlesubmitMemeForm(memeName) } >
               Add

@@ -19,11 +19,12 @@ const ImageComp = ({image}) => {
   const handleAddMeme = ()=> setEditMeme((editMeme)=> !editMeme ); 
   const handlesubmitMemeForm = (memeName)=>{
     setAddMeme({
-      text: memeName,
-      postion: "top",
+      text: memeName.text,
+      postion: memeName.position,
     });
     setEditMeme((editMeme)=> !editMeme ); 
   };
+  
   return(
     <div className='imgsection' >
       <div className='imgsection_meme' >
