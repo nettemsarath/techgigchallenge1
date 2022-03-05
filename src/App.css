@@ -14,3 +14,20 @@
   height: 250px;
   cursor: pointer;
 }
+
+.imgsection {
+  position: relative;
+}
+
+.imgsection > div {
+  position: absolute;
+  padding-left: 10px;
+  color: white;
+}
+
+.top {
+  top: 30px;
+}
+.bottom {
+  bottom: 30px;
+}
