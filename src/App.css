@@ -1,0 +1,16 @@
+.container {
+  margin: 0px 0px;
+  padding: 30px 30px;
+}
+
+.imglist {
+  display: flex;
+  gap: 3em;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
