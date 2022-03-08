@@ -42,13 +42,16 @@ const ImageComp = ({image}) => {
 };
 
 function App() {
-  const [imagesList, setImagesList] = useState(DummyImages);
+  // const [imagesList, setImagesList] = useState(DummyImages);
   return (
     <div className='container' >
       <div className='imglist'>
-        {
+        <div>
+          NETTEM SAARATH
+        </div>
+        {/* {
           imagesList.map((image, index)=> <ImageComp key={index} image={image} /> )
-        }
+        } */}
       </div>
     </div>
   )
